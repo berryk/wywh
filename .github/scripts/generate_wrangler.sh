@@ -14,3 +14,4 @@ zone_id = "$CF_ZONE_ID"
 bucket = "./public"
 entry-point = "jkpenet"
 EOM
+
