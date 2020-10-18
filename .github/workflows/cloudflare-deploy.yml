@@ -1,0 +1,25 @@
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+        with:
+          submodules: true
+      - name: Install Hugo
+        run: sudo snap install hugo
+      - name: Install Wrangler
+        run: sudo npm i @cloudflare/wrangler -g
+      - name: hugo
+        run: hugo
+      - name: Generate wrangler.toml
+        run: ./.github/scripts/generate_wrangler.sh
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_ZONE_ID: ${{ secrets.CF_ZONE_ID }}
+      - name: wrangler publish
+        run: CF_EMAIL=${{ secrets.CF_EMAIL }} CF_API_KEY=${{ secrets.CF_API_KEY }} wrangler publish
