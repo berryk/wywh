@@ -23,7 +23,7 @@ jobs:
       - name: chmod
         run: chmod 777 ./.github/scripts/generate_wrangler.sh
       - name: Generate wrangler.toml
-        run: ./.github/scripts/generate_wrangler.sh
+        run: sudo ./.github/scripts/generate_wrangler.sh
         env:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CF_ZONE_ID: ${{ secrets.CF_ZONE_ID }}
