@@ -17,9 +17,9 @@ jobs:
       - name: Yarn install
         run: sudo yarn install
       - name: webpack
-        run: sudo npm run build:webpack
+        run: npm run build:webpack
       - name: hugo
-        run: sudo npm run build:hugo
+        run: npm run build:hugo
       - name: chmod
         run: chmod 777 ./.github/scripts/generate_wrangler.sh
       - name: Generate wrangler.toml
