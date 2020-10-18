@@ -7,11 +7,10 @@ name = "jkpenet"
 type = "webpack"
 account_id = "$CF_ACCOUNT_ID"
 workers_dev = false
-route = "jkpe.net/*"
+route = ""
 zone_id = "$CF_ZONE_ID"
 
 [site]
 bucket = "./public"
-entry-point = "jkpenet"
 EOM
 
