@@ -8,7 +8,7 @@ type = "webpack"
 account_id = "$CF_ACCOUNT_ID"
 workers_dev = true
 route = ""
-zone_id = "$CF_ZONE_ID"
+zone_id = ""
 
 [site]
 bucket = "./public"
