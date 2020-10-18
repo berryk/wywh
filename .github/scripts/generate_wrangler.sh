@@ -11,5 +11,5 @@ route = ""
 zone_id = ""
 
 [site]
-bucket = "./public"
+bucket = "/home/runner/work/wywh/wywh/dist"
 EOM
