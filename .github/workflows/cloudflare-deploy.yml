@@ -17,7 +17,7 @@ jobs:
       - name: Install cross-env
         run: sudo npm install --save-dev cross-env
       - name: Install Webpack       
-        run: npm install webpack webpack-cli --save-dev
+        run: npm install webpack webpack-cli webpack-merge --save-dev
       - name: webpack
         run: sudo npm run build:webpack
       - name: hugo
