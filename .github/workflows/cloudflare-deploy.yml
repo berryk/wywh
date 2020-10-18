@@ -14,12 +14,8 @@ jobs:
         run: sudo snap install hugo
       - name: Install Wrangler
         run: sudo npm i @cloudflare/wrangler -g
-      - name: Install cross-env
-        run: sudo npm install --save-dev cross-env
       - name: Yarn install
         run: sudo yarn install
-      - name: Install Webpack       
-        run: npm install webpack webpack-cli webpack-merge terser-webpack-plugin --save-dev
       - name: webpack
         run: sudo npm run build:webpack
       - name: hugo
