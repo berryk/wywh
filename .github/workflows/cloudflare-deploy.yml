@@ -16,8 +16,12 @@ jobs:
         run: sudo npm i @cloudflare/wrangler -g
       - name: Install cross-env
         run: sudo npm install --save-dev cross-env
+      - name: Install Webpack       
+        run: npm install webpack webpack-cli --save-dev
+      - name: webpack
+        run: sudo npm run build:webpack
       - name: hugo
-        run: sudo npm run build:webpack && sudo npm run build:hugo
+        run: sudo npm run build:hugo
       - name: chmod
         run: chmod 777 ./.github/scripts/generate_wrangler.sh
       - name: Generate wrangler.toml
