@@ -28,4 +28,7 @@ jobs:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CF_ZONE_ID: ${{ secrets.CF_ZONE_ID }}
       - name: wrangler publish
-        run: CF_EMAIL=${{ secrets.CF_EMAIL }} CF_API_KEY=${{ secrets.CF_API_KEY }} wrangler publish
+        run: sudo wrangler publish
+        env: 
+          CF_EMAIL: ${{ secrets.CF_EMAIL }}
+          CF_API_KEY: ${{ secrets.CF_API_KEY }}
