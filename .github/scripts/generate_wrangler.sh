@@ -3,10 +3,10 @@
 # Generate wrangler.toml using secret variables
 
 cat > wrangler.toml <<- EOM
-name = "jkpenet"
+name = "wywh"
 type = "webpack"
 account_id = "$CF_ACCOUNT_ID"
-workers_dev = false
+workers_dev = true
 route = ""
 zone_id = "$CF_ZONE_ID"
 
