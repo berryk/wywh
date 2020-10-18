@@ -13,4 +13,3 @@ zone_id = ""
 [site]
 bucket = "./public"
 EOM
-
