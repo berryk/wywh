@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Generate wrangler.toml using secret variables
 
