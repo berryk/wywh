@@ -12,10 +12,11 @@ collections: # A list of collections the CMS should be able to edit
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-    widget: "list"
-    fields:
-      - {label: "Image", name: "image", widget: "image", required: false}
-      - {label: "Image Title", name: "img-title", widget: "string"}
+      - name: "images"
+        widget: "list"
+        fields:
+          - {label: "Image", name: "image", widget: "image", required: false}
+          - {label: "Image Title", name: "img-title", widget: "string"}
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Post" # Used in the UI, ie.: "New Post"
     folder: "site/content/post" # The path to the folder where the documents are stored
